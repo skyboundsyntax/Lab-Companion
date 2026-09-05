@@ -1,0 +1,92 @@
+# ==============================================================================
+# LAB COMPANION - ROOT .gitignore
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Environment and Secrets (CRITICAL: NEVER COMMIT REAL CREDENTIALS)
+# ------------------------------------------------------------------------------
+.env
+.env.*
+*.env
+!.env.example
+backend/.env
+backend/.env.*
+frontend/.env
+frontend/.env.*
+frontend/.env.local
+
+# ------------------------------------------------------------------------------
+# 2. Python & Django Build Artifacts
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Django generated assets & uploads
+staticfiles/
+backend/staticfiles/
+media/
+backend/media/
+
+# Database files
+*.sqlite3
+*.db
+backend/db.sqlite3
+
+# ------------------------------------------------------------------------------
+# 3. Node.js & Frontend Build Artifacts
+# ------------------------------------------------------------------------------
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ------------------------------------------------------------------------------
+# 4. Testing, Diagnostics & Temporary Files
+# ------------------------------------------------------------------------------
+scratch/
+.coverage
+htmlcov/
+.pytest_cache/
+*.log
+
+# ------------------------------------------------------------------------------
+# 5. Operating System & IDE Specific Files
+# ------------------------------------------------------------------------------
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

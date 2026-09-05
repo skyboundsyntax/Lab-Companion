@@ -1,0 +1,384 @@
+/* =========================================================================
+   EXACT LANDING PAGE POSTER HERO (Match Photo 1:1)
+   - Deep pure black background (#000000)
+   - Red angled marker logo: B.TECH ENGINEERS
+   - Clean, wide-spaced navbar links (all B.Tech Labs related)
+   - Rounded pill button: Your Account
+   - Layer 1 (Back): Text "B . T E C H", "LAB COMPANION", "STUDENT LABS"
+   - Layer 2 (Middle): White Space Shuttle rocket stack + twin red exhaust flames
+   - Layer 3 (Front): Billowing white & soft-pink cumulus clouds at bottom
+   ========================================================================= */
+
+.photo-exact-landing {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--font-sans);
+}
+
+/* 1. Top Navigation Bar */
+.photo-exact-topbar {
+  position: relative;
+  z-index: 50;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px clamp(20px, 4vw, 64px) 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left: Stylized angled red marker logo */
+.photo-exact-logo {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  transform: rotate(-9deg);
+  transition: transform 0.2s ease, filter 0.2s ease;
+  line-height: 0.95;
+  text-decoration: none;
+}
+
+.photo-exact-logo:hover {
+  transform: rotate(-9deg) scale(1.06);
+  filter: drop-shadow(0 0 10px rgba(255, 82, 82, 0.4));
+}
+
+.logo-marker-line1 {
+  font-family: 'Permanent Marker', cursive, sans-serif;
+  font-size: clamp(20px, 2.2vw, 26px);
+  color: #ff5252;
+  letter-spacing: 0.04em;
+}
+
+.logo-marker-line2 {
+  font-family: 'Permanent Marker', cursive, sans-serif;
+  font-size: clamp(16px, 1.8vw, 21px);
+  color: #ff5252;
+  letter-spacing: 0.08em;
+  margin-left: 4px;
+}
+
+/* Center: Clean wide-spaced nav links */
+.photo-exact-nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 3.2vw, 48px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.photo-exact-nav-links a {
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #d1d5db;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.photo-exact-nav-links a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+/* Real-Time Telemetry Badge */
+.photo-exact-realtime-telemetry {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  padding: 6px 16px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.photo-exact-realtime-telemetry:hover {
+  border-color: rgba(52, 211, 153, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.telemetry-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #34d399;
+  box-shadow: 0 0 8px #34d399;
+  animation: pulse-live 1.5s infinite;
+}
+
+.telemetry-label {
+  color: #34d399;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.telemetry-timestamp {
+  color: #f3f4f6;
+  font-weight: 600;
+}
+
+/* Right: Coral-red rounded pill CTA */
+.photo-exact-account-btn {
+  background-color: #ff5753;
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px;
+  padding: 10px 24px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(255, 87, 83, 0.35);
+}
+
+.photo-exact-account-btn:hover {
+  background-color: #ff3b36;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255, 87, 83, 0.55);
+}
+
+/* 2. Hero Centerpiece Stage */
+.photo-exact-hero-stage {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  min-height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+/* Layer 1 (Back, z-index: 1): The Giant Typography */
+.photo-exact-text-backdrop {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Top thin title: B . T E C H */
+.photo-exact-text-top {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(22px, 3vw, 42px);
+  font-weight: 300;
+  letter-spacing: 0.7em;
+  color: #ffffff;
+  padding-left: 0.7em; /* counters the trailing letter-spacing */
+  text-transform: uppercase;
+  margin-bottom: clamp(8px, 1.4vw, 20px);
+  opacity: 0.95;
+}
+
+/* Giant Main Title: LAB COMPANION */
+.photo-exact-text-main {
+  font-family: 'Space Grotesk', 'Outfit', sans-serif;
+  font-size: clamp(48px, 9.5vw, 140px);
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  color: #ffffff;
+  line-height: 0.92;
+  padding-left: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+/* Bottom subtitle: STUDENT LABS */
+.photo-exact-text-sub {
+  font-family: 'Space Grotesk', 'Outfit', sans-serif;
+  font-size: clamp(18px, 3.2vw, 46px);
+  font-weight: 800;
+  letter-spacing: 0.38em;
+  color: #ff5252;
+  padding-left: 0.38em;
+  text-transform: uppercase;
+  margin-top: clamp(10px, 1.8vw, 24px);
+  white-space: nowrap;
+  text-shadow: 0 0 25px rgba(255, 82, 82, 0.35);
+}
+
+/* Layer 2 (Middle, z-index: 2): The Space Shuttle Rocket & Exhaust */
+.photo-exact-rocket-wrapper {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: clamp(280px, 30vw, 460px);
+  height: clamp(480px, 58vh, 760px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.photo-exact-rocket-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 0 30px rgba(255, 60, 60, 0.25));
+}
+
+/* Layer 3 (Front, z-index: 10): Billowing Cloud Smoke Floor */
+.photo-exact-clouds-footer {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: clamp(140px, 24vh, 260px);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.photo-exact-clouds-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Optional Curriculum & Portals Drawer (Collapsible / Triggered) */
+.photo-exact-quick-bar {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 25;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(10, 15, 28, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  padding: 8px 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.quick-bar-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.quick-bar-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-radius: 9999px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quick-bar-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.quick-bar-btn.primary {
+  background: #ff5753;
+  border-color: #ff5753;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.quick-bar-btn.primary:hover {
+  background: #ff3b36;
+}
+
+/* Curriculum Drawer Modal */
+.curriculum-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.curriculum-drawer-card {
+  background: #0b1120;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 16px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 28px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9);
+}
+
+.curriculum-branch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.curriculum-branch-tile {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.curriculum-branch-tile:hover {
+  border-color: #38bdf8;
+  background: #1e293b;
+  transform: translateY(-2px);
+}
+
+/* Responsive Rules */
+@media (max-width: 900px) {
+  .photo-exact-nav-links {
+    display: none;
+  }
+  .photo-exact-text-main {
+    font-size: clamp(38px, 10vw, 80px);
+  }
+  .photo-exact-text-sub {
+    font-size: clamp(14px, 3.5vw, 24px);
+    letter-spacing: 0.25em;
+  }
+}

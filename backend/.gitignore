@@ -1,0 +1,33 @@
+# ================================================================
+# LAB COMPANION - BACKEND .gitignore
+# ================================================================
+
+# Environment secrets and credentials
+.env
+.env.*
+!.env.example
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# SQLite database files
+*.sqlite3
+*.db
+
+# Django static and media uploads
+staticfiles/
+media/
+
+# Test and coverage artifacts
+.coverage
+htmlcov/
+.pytest_cache/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
