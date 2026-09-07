@@ -7,7 +7,7 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Supabase-3ECF8E.svg)](https://supabase.com/)
 [![Security](https://img.shields.io/badge/Security-2--Step%20OTP%20%2B%20RBAC-red.svg)]()
 
-**Lab Companion** is an enterprise-grade academic compliance and laboratory management platform engineered for engineering institutions. It provides end-to-end administration for college laboratories, student submission grading, attendance tracking, faculty provisioning, and multi-tier access control with mandatory administrative approval.
+**Lab Companion** is an enterprise-grade academic compliance and laboratory management platform engineered for engineering institutions. It provides an end-to-end administration for college laboratories, student submission grading, attendance tracking, faculty provisioning, and multi-tier access control with mandatory administrative approval.
 
 ---
 
