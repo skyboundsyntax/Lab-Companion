@@ -22,7 +22,7 @@
 - **Cloud Database Support**: Native integration with **Supabase PostgreSQL** via connection pooling, with full DDL schema and automatic seeding.
 - **Modern Responsive Interface**: React 18 frontend with dark/light themes, real-time status badges, and streamlined laboratory navigation.
 
----
+----
 
 ## Architecture & Project Structure
 
